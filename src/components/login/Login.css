@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
+
+.main-container{
+    font-family: Poppins;
+}
+.main-header{
+    font-weight: 800;
+}
+.secondary-header{
+    font-weight: 600;
+}
+.label-header{
+    font-weight: 600;
+}
+.left-login{
+    background-image: url(../../assets/images/Login\ Image.jpg);
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+}
+
+.logo{
+    width: 120px;
+    height: 90px;
+}
+.input-group-text{
+    background-color: #fff !important;
+    margin-right: 0px !important;
+    color: #E8E8E7 !important;
+}
+.custom_margin_left{
+    margin-left: 8px;
+}
+.custom-button{
+    padding: 5px 70px !important;
+}
