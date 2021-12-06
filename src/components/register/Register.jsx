@@ -19,8 +19,7 @@ export default function Register() {
     const [showForm1, setShowForm1] = useState(true);
     const [showForm2, setShowForm2] = useState(false);
     const [showForm3, setShowForm3] = useState(false);
-    const [showForm4, setShowForm4] = useState(false);
-
+    const [counter, setCounter] = React.useState(59);
 
     const onChangeEye = (value) =>{
         console.log(value);
@@ -42,20 +41,21 @@ export default function Register() {
             setShowForm2(false);
             setShowForm3(true);
         }
-        else if(value==="tab3"){
-            setShowForm4(true);
-            setShowForm3(false);
-        }
     }
+    React.useEffect(() => {
+        const timer =
+        counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+        return () => clearInterval(timer);
+    }, [counter]);
     return (
         <Container fluid className="main-container">
             <Row>
-                <Col md={8} className="d-flex align-items-center">
+                <Col md={8} sm={12} className="d-flex align-items-center">
                     {showForm1 ? <Card className="w-50 mx-auto border-0">
                         <div className="card-body text-start">
                             <h3 className="text-primary main-header">Sign Up</h3>
                             <p className="secondary-header">Registration Page</p>
-                            <div>
+                            {/* <div>
                                 <div className="position-relative m-4">
                                     <div className="progress" style={{height: "1px"}}>
                                         <div className="progress-bar" role="progressbar" style={{width: '0%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -63,6 +63,16 @@ export default function Register() {
                                     <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>1</button>
                                     <button className="position-absolute top-0 start-50 translate-middle btn btn-sm rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>2</button>
                                     <button className="position-absolute top-0 start-100 translate-middle btn btn-sm rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
+                                </div>
+                            </div> */}
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="custom-stepup-line"></div>
+                                    <ul className="custom-stepup ">
+                                        <li className="custom-stepup-item">1</li>
+                                        <li className="custom-stepup-item bg-light text-muted">2</li>
+                                        <li className="custom-stepup-item bg-light text-muted">3</li>
+                                    </ul>
                                 </div>
                             </div>
                             <Form>
@@ -121,7 +131,7 @@ export default function Register() {
                             <div className="card-body text-start">
                                 <h3 className="text-primary main-header">OTP Verification</h3>
                                 <p className="secondary-header">A 6 Digit Verification Code Has Been Sent</p>
-                                <div>
+                                {/* <div>
                                     <div className="position-relative m-4">
                                         <div className="progress" style={{height: "1px"}}>
                                             <div className="progress-bar" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -129,6 +139,16 @@ export default function Register() {
                                         <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                         <button className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>2</button>
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
+                                    </div>
+                                </div> */}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom-stepup-line"></div>
+                                        <ul class="custom-stepup ">
+                                            <li class="custom-stepup-item">{checkIcon}</li>
+                                            <li class="custom-stepup-item">2</li>
+                                            <li class="custom-stepup-item bg-light text-muted">3</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <Form>
@@ -163,7 +183,7 @@ export default function Register() {
                                     </div>
                                     <div className="d-flex justify-content-center mt-2">
                                         <p className="custom-form-text-check">I Didn't Get Any Code.</p>
-                                        <a href="23" className="custom-form-text-check text-decoration-none">RESEND CODE (23)</a>
+                                        <a href="23" className="custom-form-text-check text-decoration-none">RESEND CODE ({counter})</a>
                                     </div>
                                 </Form>
                             </div>
@@ -174,7 +194,7 @@ export default function Register() {
                             <div className="card-body text-start">
                                 <h3 className="text-primary main-header">Success</h3>
                                 <p className="secondary-header">Awesome</p>
-                                <div>
+                                {/* <div>
                                     <div className="position-relative m-4">
                                         <div className="progress" style={{height: "1px"}}>
                                             <div className="progress-bar" role="progressbar" style={{width: '100%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -182,6 +202,16 @@ export default function Register() {
                                         <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                         <button className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
+                                    </div>
+                                </div> */}
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom-stepup-line"></div>
+                                        <ul class="custom-stepup ">
+                                            <li class="custom-stepup-item">{checkIcon}</li>
+                                            <li class="custom-stepup-item">{checkIcon}</li>
+                                            <li class="custom-stepup-item">{checkIcon}</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <Form>

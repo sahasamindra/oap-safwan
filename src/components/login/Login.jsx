@@ -32,7 +32,7 @@ const Login = () => {
     return (
         <Container fluid className="main-container">
             <Row>
-                <Col md={8} sm={12} xs={12} className="d-flex align-items-center">
+                <Col xl={8} md={12} sm={12} className="d-flex align-items-center">
                     <Card className="w-50 mx-auto border-0">
                         <div className="card-body text-start">
                             <img src={Logo} alt="Main Logo" className="logo"/>
@@ -56,7 +56,7 @@ const Login = () => {
                                 </Row>
                                 <Row className="mb-3">
                                     <Col md={6} className="d-flex">
-                                        <Form.Check type="radio" onClick={toggleRadio} checked={radioToggle}/>
+                                        <Form.Check type="radio" onClick={toggleRadio}/>
                                         <Form.Check.Label className="custom_margin_left">Remember Me </Form.Check.Label>
                                     </Col>
                                     <Col md={6} className="text-end">
@@ -75,7 +75,7 @@ const Login = () => {
                         </div>
                     </Card>
                 </Col>
-                <Col md={4} className="left-login"></Col>
+                <Col xl={4} className="left-login"></Col>
             </Row>
         </Container>
     )

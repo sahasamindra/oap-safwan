@@ -48,12 +48,12 @@ export default function Forget() {
     return (
         <Container fluid className="main-container">
             <Row>
-                <Col md={8} className="d-flex align-items-center">
+                <Col md={8} sm={12} className="d-flex align-items-center">
                     {showForm1 ? <Card className="w-50 mx-auto border-0">
                         <div className="card-body text-start">
                             <h3 className="text-primary main-header">Forgot Password</h3>
                             <p className="secondary-header">Recover Your Password With Few Simple Steps</p>
-                            <div>
+                            {/* <div>
                                 <div className="position-relative m-4">
                                     <div className="progress" style={{height: "1px"}}>
                                         <div className="progress-bar" role="progressbar" style={{width: '0%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -61,6 +61,16 @@ export default function Forget() {
                                     <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>1</button>
                                     <button className="position-absolute top-0 start-50 translate-middle btn btn-sm rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>2</button>
                                     <button className="position-absolute top-0 start-100 translate-middle btn btn-sm rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
+                                </div>
+                            </div> */}
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="custom-stepup-line"></div>
+                                    <ul className="custom-stepup ">
+                                        <li className="custom-stepup-item">1</li>
+                                        <li className="custom-stepup-item bg-light text-muted">2</li>
+                                        <li className="custom-stepup-item bg-light text-muted">3</li>
+                                    </ul>
                                 </div>
                             </div>
                             <Form>
@@ -83,7 +93,7 @@ export default function Forget() {
                             <div className="card-body text-start">
                                 <h3 className="text-primary main-header">OTP Verification</h3>
                                 <p className="secondary-header">A 6 Digit Verification Code Has Been Sent</p>
-                                <div>
+                                {/* <div>
                                     <div className="position-relative m-4">
                                         <div className="progress" style={{height: "1px"}}>
                                             <div className="progress-bar" role="progressbar" style={{width: '50%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -92,29 +102,39 @@ export default function Forget() {
                                         <button className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>2</button>
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
                                     </div>
+                                </div> */}
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="custom-stepup-line"></div>
+                                        <ul className="custom-stepup">
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">2</li>
+                                            <li className="custom-stepup-item bg-light text-muted">3</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <Form>
                                     <Form.Group className="mb-1">
                                         <Form.Label className="label-header">Verification Code</Form.Label>
                                         <div className="row">
-                                            <Col md={2} sm={2}>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
-                                            <Col md={2} sm={2}>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
-                                            <Col md={2} sm={2}>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
-                                            <Col md={2} sm={2}>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
-                                            <Col md={2} sm={2}>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
-                                            <Col md={2} sm={2}>
+                                            </div>
+                                            <div className="col-md-2 col-sm-2 col-2">
                                                 <input type="text" className="form-control"/>
-                                            </Col>
+                                            </div>
                                         </div>
                                         <Form.Text className="custom-form-text">
                                             This Code Active For 5 Minute
@@ -135,7 +155,7 @@ export default function Forget() {
                         <div className="card-body text-start">
                             <h3 className="text-primary main-header">Reset New Password</h3>
                             <p className="secondary-header">Account Verification Successful</p>
-                            <div>
+                            {/* <div>
                                 <div className="position-relative m-4">
                                     <div className="progress" style={{height: "1px"}}>
                                         <div className="progress-bar" role="progressbar" style={{width: '0%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -143,6 +163,16 @@ export default function Forget() {
                                     <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                     <button className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                     <button className="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
+                                </div>
+                            </div> */}
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="custom-stepup-line"></div>
+                                    <ul className="custom-stepup">
+                                        <li className="custom-stepup-item">{checkIcon}</li>
+                                        <li className="custom-stepup-item">{checkIcon}</li>
+                                        <li className="custom-stepup-item">3</li>
+                                    </ul>
                                 </div>
                             </div>
                             <Form>
@@ -175,7 +205,7 @@ export default function Forget() {
                             <div className="card-body text-start">
                                 <h3 className="text-primary main-header">Success</h3>
                                 <p className="secondary-header">Awesome</p>
-                                <div>
+                                {/* <div>
                                     <div className="position-relative m-4">
                                         <div className="progress" style={{height: "1px"}}>
                                             <div className="progress-bar" role="progressbar" style={{width: '100%'}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -183,6 +213,16 @@ export default function Forget() {
                                         <button className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                         <button className="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill border border-2 border-light" style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
+                                    </div>
+                                </div> */}
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="custom-stepup-line"></div>
+                                        <ul className="custom-stepup">
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <Form>

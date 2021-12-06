@@ -30,6 +30,68 @@
 .custom_margin_left{
     margin-left: 8px;
 }
-.custom-button{
-    padding: 5px 70px !important;
+
+.custom-stepup-line{
+    position: relative;
+    -moz-box-shadow: 0px 3px 14px 6px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 0px 3px 14px 6px rgba(0,0,0,.14);
+    box-shadow: 0px 3px 14px 6px rgba(0,0,0,0.14);
+    width: 156px;
+    height: 4px;
+    top: 36%;
+    left: 18%;
+    z-index: 1;
+}
+.custom-stepup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.custom-stepup-item {
+    background-color: #0979f9;
+    text-decoration: none;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid #ffffff;
+    -moz-box-shadow: 0px 3px 14px 6px rgba(0,0,0,0.14);
+    -webkit-box-shadow: 0px 3px 14px 6px rgba(0,0,0,.14);
+    box-shadow: 0px 3px 14px 6px rgba(0,0,0,0.14);
+    z-index: 2;
+}
+
+
+@media only screen and (max-width: 1024px)  {
+    .left-login{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px)  {
+    .left-login{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px)  {
+    .left-login{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .left-login{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .left-login{
+        display: none;
+    }
 }

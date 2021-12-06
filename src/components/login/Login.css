@@ -12,6 +12,7 @@
 .label-header{
     font-weight: 600;
 }
+
 .left-login{
     background-image: url(../../assets/images/Login\ Image.jpg);
     background-position: center;
@@ -33,5 +34,46 @@
     margin-left: 8px;
 }
 .custom-button{
-    padding: 5px 70px !important;
+    width: 12.1rem;
+}
+@media only screen and (max-width: 1024px)  {
+    .left-login{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px)  {
+    .left-login{
+        display: none;
+    }
+
+    .custom-button{
+        width: 10.4rem;
+    }
+}
+@media only screen and (max-width: 768px)  {
+    .left-login{
+        display: none;
+    }
+    .custom-button{
+        width: 8.1rem;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .left-login{
+        display: none;
+    }
+    .custom-button {
+        width: 7.65rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .left-login{
+        display: none;
+    }
+    .custom-button {
+        width: 5.65rem;
+    }
 }
