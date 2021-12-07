@@ -76,6 +76,10 @@
     .left-login{
         display: none;
     }
+    .custom-stepup-line{
+        width: 126px;
+        left: 21%;
+    }
 }
 
 @media only screen and (max-width: 768px)  {
@@ -90,8 +94,12 @@
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 375px) {
     .left-login{
         display: none;
+    }
+    .custom-stepup-line{
+        width: 86px;
+        left: 31%;
     }
 }

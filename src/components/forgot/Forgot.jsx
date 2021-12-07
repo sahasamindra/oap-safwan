@@ -48,7 +48,7 @@ export default function Forget() {
     return (
         <Container fluid className="main-container">
             <Row>
-                <Col md={8} sm={12} className="d-flex align-items-center">
+                <Col xl={8} lg={12} md={12} sm={12} className="d-flex align-items-center">
                     {showForm1 ? <Card className="w-50 mx-auto border-0">
                         <div className="card-body text-start">
                             <h3 className="text-primary main-header">Forgot Password</h3>
@@ -181,10 +181,10 @@ export default function Forget() {
                                     <InputGroup className="mb-3">
                                         <FormControl type={typeChange ? "text" : "password"} className="border-end-0" placeholder="Enter Password Here" />
                                         <InputGroup.Text id="basic-addon1" onClick={()=>onChangeEye("password")}>{eyeToggler ? eyeSlash : eye}</InputGroup.Text>
-                                        <Form.Text className="text-muted custom-form-text">
-                                            Use 8 or More Characters With A Mix Of Letters, Numbers & Symbol
-                                        </Form.Text>
                                     </InputGroup>
+                                    <Form.Text className="text-muted custom-form-text">
+                                        Use 8 or More Characters With A Mix Of Letters, Numbers &amp; Symbol
+                                    </Form.Text>
                                 </Form.Group>
                                 <Form.Group className="mb-1">
                                     <Form.Label className="label-header">Re-Password<span className="text-danger">*</span> </Form.Label>

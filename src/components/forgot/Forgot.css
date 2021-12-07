@@ -83,6 +83,10 @@
     .left-login{
         display: none;
     }
+    .custom-stepup-line{
+        width: 126px;
+        left: 21%;
+    }
 }
 
 @media only screen and (max-width: 600px)  {
@@ -94,5 +98,9 @@
 @media only screen and (max-width: 350px) {
     .left-login{
         display: none;
+    }
+    .custom-stepup-line{
+        width: 86px;
+        left: 31%;
     }
 }

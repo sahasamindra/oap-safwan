@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import { Container, Row, Col, Card, Form, Button, InputGroup, FormControl } from 'react-bootstrap';
+import React, {useState,useEffect} from 'react'
+import { Col, Card, Form, Button, InputGroup, FormControl } from 'react-bootstrap';
 import "./Register.css"
 import { CountryCode } from "./CountryCode";
 // FontAwesome
@@ -42,15 +42,16 @@ export default function Register() {
             setShowForm3(true);
         }
     }
-    React.useEffect(() => {
+    useEffect(() => {
         const timer =
         counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
         return () => clearInterval(timer);
     }, [counter]);
+    
     return (
-        <Container fluid className="main-container">
-            <Row>
-                <Col md={8} sm={12} className="d-flex align-items-center">
+        <div className="container-fluid main-container">
+            <div className="row">
+                <div className="col-xl-8 col-md-12 col-sm-12 col-12 d-flex align-items-center">
                     {showForm1 ? <Card className="w-50 mx-auto border-0">
                         <div className="card-body text-start">
                             <h3 className="text-primary main-header">Sign Up</h3>
@@ -82,7 +83,7 @@ export default function Register() {
                                 </Form.Group>
                                 <Form.Group className="mb-1">
                                     <Form.Label className="label-header">Email<span className="text-danger">*</span> </Form.Label>
-                                    <Row>
+                                    <div className="row">
                                         <Col md={4}>
                                             <Form.Select aria-label="Default select example">
                                                 {CountryCode.map(country => <option key={country.flag}>{country.flag}{country.dial_code}</option>)}
@@ -91,7 +92,7 @@ export default function Register() {
                                         <Col md={8}>
                                             <Form.Control type="email" placeholder="Enter Email Here"/>
                                         </Col>
-                                    </Row>
+                                    </div>
                                 </Form.Group>
                                 <Form.Group className="mb-1">
                                     <Form.Label className="label-header">Mobile Number<span className="text-danger">*</span> </Form.Label>
@@ -102,10 +103,10 @@ export default function Register() {
                                     <InputGroup className="mb-3">
                                         <FormControl type={typeChange ? "text" : "password"} className="border-end-0" placeholder="Enter Password Here" />
                                         <InputGroup.Text id="basic-addon1" onClick={()=>onChangeEye("password")}>{eyeToggler ? eyeSlash : eye}</InputGroup.Text>
-                                        <Form.Text className="text-muted custom-form-text">
-                                            Use 8 or More Characters With A Mix Of Letters, Numbers & Symbol
-                                        </Form.Text>
                                     </InputGroup>
+                                    <Form.Text className="text-muted custom-form-text">
+                                        Use 8 or More Characters With A Mix Of Letters, Numbers & Symbol
+                                    </Form.Text>
                                 </Form.Group>
                                 <Form.Group className="mb-1">
                                     <Form.Label className="label-header">Re-Password<span className="text-danger">*</span> </Form.Label>
@@ -141,13 +142,13 @@ export default function Register() {
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>3</button>
                                     </div>
                                 </div> */}
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="custom-stepup-line"></div>
-                                        <ul class="custom-stepup ">
-                                            <li class="custom-stepup-item">{checkIcon}</li>
-                                            <li class="custom-stepup-item">2</li>
-                                            <li class="custom-stepup-item bg-light text-muted">3</li>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="custom-stepup-line"></div>
+                                        <ul className="custom-stepup ">
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">2</li>
+                                            <li className="custom-stepup-item bg-light text-muted">3</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -156,22 +157,22 @@ export default function Register() {
                                         <Form.Label className="label-header">Verification Code</Form.Label>
                                         <div className="row">
                                             <Col md={2} sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                             <Col md={2} sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                             <Col md={2} sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                             <Col md={2} sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                             <Col md={2} sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                             <Col md={2}sm={2}>
-                                                <input type="text" className="form-control"/>
+                                                <input type="text" className="form-control text-center" maxLength="1"/>
                                             </Col>
                                         </div>
                                         <Form.Text className="custom-form-text">
@@ -204,13 +205,13 @@ export default function Register() {
                                         <button className="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill border border-2 " style={{width: '2rem', height:'2rem'}}>{checkIcon}</button>
                                     </div>
                                 </div> */}
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="custom-stepup-line"></div>
-                                        <ul class="custom-stepup ">
-                                            <li class="custom-stepup-item">{checkIcon}</li>
-                                            <li class="custom-stepup-item">{checkIcon}</li>
-                                            <li class="custom-stepup-item">{checkIcon}</li>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="custom-stepup-line"></div>
+                                        <ul className="custom-stepup ">
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">{checkIcon}</li>
+                                            <li className="custom-stepup-item">{checkIcon}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -225,9 +226,9 @@ export default function Register() {
                             </div>
                         </Card> : null
                     }
-                </Col>
-                <Col md={4} className="left-login"></Col>
-            </Row>
-        </Container>
+                </div>
+                <div className="col-xl-4 left-login"></div>
+            </div>
+        </div>
     )
 }
