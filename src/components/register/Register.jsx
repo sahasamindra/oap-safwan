@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Col,
+  Row,
   Card,
   Form,
   Button,
@@ -102,38 +103,38 @@ export default function Register() {
                       placeholder="Please Enter Name Here"
                     />
                   </Form.Group>
+
                   <Form.Group className="mb-1">
                     <Form.Label className="label-header">
                       Email<span className="text-danger">*</span>{" "}
                     </Form.Label>
-                    <div className="row">
+                    <Form.Control type="email" placeholder="Enter Email Here" />
+                  </Form.Group>
+
+                  <Form.Group className="mb-1">
+                    <Form.Label className="label-header">
+                      Mobile Number<span className="text-danger">*</span>{" "}
+                    </Form.Label>
+
+                    <Row>
                       <Col md={4}>
-                        <Form.Select aria-label="Default select example">
+                        <Form.Select>
                           {CountryCode.map((country) => (
                             <option key={country.flag}>
-                              {country.flag}
-                              {country.dial_code}
+                              {`${country.flag} ${country.dial_code}`}
                             </option>
                           ))}
                         </Form.Select>
                       </Col>
                       <Col md={8}>
                         <Form.Control
-                          type="email"
-                          placeholder="Enter Email Here"
+                          type="tel"
+                          placeholder="Enter Mobile Here"
                         />
                       </Col>
-                    </div>
+                    </Row>
                   </Form.Group>
-                  <Form.Group className="mb-1">
-                    <Form.Label className="label-header">
-                      Mobile Number<span className="text-danger">*</span>{" "}
-                    </Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="Please Enter Here"
-                    />
-                  </Form.Group>
+
                   <Form.Group className="mb-1">
                     <Form.Label className="label-header">
                       Password<span className="text-danger">*</span>{" "}
