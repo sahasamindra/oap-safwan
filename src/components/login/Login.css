@@ -14,7 +14,7 @@
 }
 
 .left-login{
-    background-image: url(../../assets/images/Login\ Image.jpg);
+    background-image: url(../../assets/images/loginImage.jpg);
     background-position: center;
     height: 100vh;
     background-repeat: no-repeat, repeat;
@@ -23,7 +23,7 @@
 
 .logo{
     width: 120px;
-    height: 90px;
+    height: auto;
 }
 .input-group-text{
     background-color: #fff !important;
